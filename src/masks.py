@@ -5,7 +5,7 @@ def get_mask_card_number(number_cart: int) -> str:
         return "Введен не верный номер карты"
     else:
         card_mask = number_cart_str[:4] + " " + number_cart_str[4:6] + "** **** " + number_cart_str[12:]
-        return f"Ваш скрытый номер карты: {card_mask}"
+        return card_mask
 
 
 def get_mask_account(number_account: int) -> str:
@@ -15,4 +15,4 @@ def get_mask_account(number_account: int) -> str:
         return "Введен не верный номер счета"
     else:
         account_mask = "**" + number_account_str[16:]
-        return f"Ваш скрытый номер счета: {account_mask}"
+        return account_mask
